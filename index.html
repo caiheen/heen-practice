@@ -37,6 +37,21 @@
             z-index: 20;
             opacity: 1;
         }
+        .dot-wrap {
+            display: flex;
+            justify-content: center;
+        }
+        .dot {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: orange;
+            margin: 5px 3px;
+        }
+        .dot.active {
+            background-color: orangered;
+        }
     </style>
 </head>
 <body>
@@ -47,6 +62,16 @@
         <div class="slide-item">4</div>
         <div class="slide-item">5</div>
     </div>
+    <div class="dot-wrap">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+    <button class="prev">prev</button>
+    <button class="next">next</button>
+
     <script src="main.js"></script>
 </body>
 </html>

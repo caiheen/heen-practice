@@ -52,7 +52,7 @@ function prevSlide() {
 }
 
 slide();
-// setInterval(slide, 2000);
+setInterval(slide, 2000);
 prev.addEventListener('click', prevSlide);
 next.addEventListener('click', slide);
 

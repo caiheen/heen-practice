@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>modal</title>
+    <style>
+        body {
+            height: 5000px;
+            background-color: bisque;
+        }
+        .wrap {
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            top: 0; left: 0;
+            display: none;
+        }
+        .wrap.open-modal{
+            display: block;
+        }
+        .overlay {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0; left: 0;
+            background-color: rgba(0,0,0,0.5);
+        }
+        .open {
+            background-color: #fff;
+            display: inline-block;
+            padding: 10px;
+            cursor: pointer;
+        }
+        .modal-content {
+            width: 50%;
+            height: 500px;
+            background-color: black;
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%,-50%);
+        }
+        .modal-content p {
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+        }
+        .close {
+            position: absolute;
+            right: -22px;
+            background-color: #fff;
+            display: inline-block;
+            padding: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <span class="open">모달 열기</span>
+    <div class="wrap">
+        <div class="overlay"></div>
+        <div class="modal-content">
+            <span class="close">X</span>
+            <p>팝업창 입니다!</p>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>

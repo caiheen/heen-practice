@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>accordion</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .wrap {
+            width: 500px;
+            margin: 30px auto;
+            list-style: none;
+        }
+        .wrap a {
+            display: flex;
+            width: 100%;
+            height: 50px;
+            background-color: blueviolet;
+            color: #fff;
+            font-size: 20px;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+        }
+        .menu {
+            list-style: none;
+        }
+        .menu li {
+            height: 0px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            background-color:darkgray;
+            transition: 0.5s;
+        }
+        .menu.active li {
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <ul class="wrap">
+        <li class="btn">
+            <a class="btns" href="#">menu1</a>
+            <ul class="menu">
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+            </ul>
+        </li>
+        <li class="btn">
+            <a class="btns" href="#">menu2</a>
+            <ul class="menu">
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+            </ul>
+        </li>
+        <li class="btn">
+            <a class="btns" href="#">menu3</a>
+            <ul class="menu">
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+            </ul>
+        </li>
+    </ul>
+    <script src="main.js"></script>
+</body>
+</html>

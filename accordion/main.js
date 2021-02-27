@@ -12,7 +12,7 @@ const open = (index) => {
 }
 
 btn.forEach((item, index) => {
-    item.addEventListener('click', () => {
+    item.addEventListener('click', function(){
         open(index);
     });
 });

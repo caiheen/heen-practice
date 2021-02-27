@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tab</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .tab-wrap {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .btn-wrap {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            height: 50px;
+            background-color: palegoldenrod;
+        }
+        .btn-wrap .btn {
+            width: 33.333333%;
+            height: 100%;
+            text-align: center;
+            line-height: 50px;
+            transform: 0.3s;
+            cursor: pointer;
+        }
+        .btn-wrap .btn.active {
+            background-color: #282828;
+            color: #fff;
+        }
+        .content-wrap {
+            width: 100%;
+            height: 500px;
+            position: relative;
+        }
+        .content-wrap .content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 35px;
+            background-color: aquamarine;
+            opacity: 0;
+            transition: 0.3s;
+        }
+        .content-wrap .content.active {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="tab-wrap">
+        <div class="btn-wrap">
+            <div class="btn active">1</div>
+            <div class="btn">2</div>
+            <div class="btn">3</div>
+        </div>
+        <div class="content-wrap">
+            <div class="content active">안녕하세요</div>
+            <div class="content">채하은</div>
+            <div class="content">입니다</div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>

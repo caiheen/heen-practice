@@ -1,25 +1,25 @@
 const btn = document.querySelectorAll(".btn");
 const content = document.querySelectorAll(".content");
 
-const tab = (index) => {
+function tab(index){
     btn.forEach((item, i) => {
-        if(i !== index){
-            item.classList.remove("active");
-        } else {
+        if(i === index){
             item.classList.add("active");
+        } else{
+            item.classList.remove("active");
         }
     });
     content.forEach((item, i) => {
-        if(i !== index){
-            item.classList.remove("active");
-        } else {
+        if(i === index){
             item.classList.add("active");
+        } else{
+            item.classList.remove("active");
         }
     });
 }
 
-btn.forEach(function(item, index){
-    item.addEventListener('click', function(){
+btn.forEach((item, index) => {
+    item.addEventListener('click', () => {
         tab(index);
     });
 });

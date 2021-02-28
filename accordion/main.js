@@ -1,7 +1,7 @@
 const btn = document.querySelectorAll(".btn");
 const menu = document.querySelectorAll(".menu");
 
-const open = (index) => {
+function open(index){
     menu.forEach((item, i) => {
         if(i === index){
             item.classList.add("active");

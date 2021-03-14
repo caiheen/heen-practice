@@ -1,5 +1,6 @@
-// document.write("강한친구 대한육군<br/>강한친구 대한육군");
-
 const txt = document.querySelector("p");
+const A = prompt("A한 자리수 정수를 입력하세요.", "");
+const B = prompt("B숫자를 입력해주세요");
 
-txt.innerHTML = "강한친구 대한육군<br/>강한친구 대한육군";
+let C = Number(A) + Number(B);
+txt.innerHTML = C;

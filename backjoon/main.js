@@ -1,12 +1,15 @@
-let A = prompt("연도를 입력해주세요!");
+let X = prompt("X좌표를 입력해주세요!");
+let Y = prompt("Y좌표를 입력해주세요!");
 
 function results(){
-    if(Number(A) % 4 == 0 && Number(A) % 100 !== 0){
+    if(Number(X) > 0 && Number(Y) > 0){
         document.write("1");
-    } else if(Number(A) % 400 == 0){
-        document.write("1");
+    } else if((Number(X) < 0 && Number(Y) > 0)){
+        document.write("2");
+    } else if((Number(X) < 0 && Number(Y) < 0)){
+        document.write("3");
     } else{
-        document.write("0");
+        document.write("4");
     }
 }
 results();

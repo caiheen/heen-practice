@@ -1,9 +1,12 @@
-let N = prompt("몇단?");
+// 1 1
+// 2 3
+// 3 4
+// 9 8
+// 5 2
 
-document.write(Number(N) + "단");
-document.write('<br/>');
-for(let i = 1; i < 10; i++){
-    document.write(Number(N) + '*' + i + "=" + (Number(N) * i));
-    document.write('<br/>');
-}
+const A = [1, 2, 3, 9, 5];
+const B = [1, 3, 4, 8, 2];
 
+A.forEach((item, index) => {
+    console.log(item + B[index]);
+});

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin:0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        section {
+            width: 100vw;
+            height: 100vh;
+
+        }
+
+        section:nth-child(odd){
+            background: teal;
+        }
+
+        section:nth-child(even){
+            background: steelblue;
+        }
+
+        .dot-wrap {
+            position: fixed;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 100px;
+            display: flex;
+            flex-direction: column;
+            height: 50px;
+            justify-content:space-between;
+        }
+
+        .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            border: 1px solid #222;
+        }
+
+        .dot.show {
+            background: #222;
+        }
+
+
+
+
+        
+    </style>
+</head>
+<body>
+    <section class="first"></section>
+    <section class="sec"></section>
+    <section class="thir"></section>
+    <section class="four"></section>
+
+    <div class="dot-wrap">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fullpage</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        #container-wrap {
+            overflow: hidden;
+            height: 100vh;
+        }
+        .cont {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.5s;
+            width: 100%;
+            height: 100vh;
+            opacity: 0;
+        }
+        .cont:nth-child(odd) {
+            background-color: cadetblue;
+        }
+        .cont:nth-child(even) {
+            background-color: darkcyan;
+        }
+        .cont.show {
+            opacity: 1;
+        }
+        #header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100px;
+            width: 100%;
+            background-color: rgba(0,0,0,0.5);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">header</div>
+    <div id="container-wrap">
+        <div class="cont show">
+            section01
+        </div>
+        <div class="cont">
+            section02
+        </div>
+        <div class="cont">
+            section03
+        </div>
+        <div class="cont">
+            section04
+        </div>
+        <div class="cont">
+            section05
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>

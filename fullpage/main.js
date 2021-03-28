@@ -7,6 +7,7 @@ let prev;
 
 // scroll Effect
 function scrollEffect(elem){
+    console.log(elem)
     window.scrollTo({
         'behavior':'smooth', 
         'left':0,
@@ -15,28 +16,28 @@ function scrollEffect(elem){
 }
 
 // whell event handle
-function scrolling(){
-    const currentcont = document.querySelectorAll(".cont.show");
+function scrolling(e){
+    const currentcont = document.querySelector(".cont.show");
+    if(currentcont){
+        next = currentcont.nextElementSibling;
+        prev = currentcont.previousElementSibling;
+    }
     // const target = e.target;
-    cont.forEach(item => {
+    
+    if(e.deltaY < 0){
+        e.preventDefault();
         if(currentcont){
-            next = item.nextElementSibling;
-            prev = item.previousElementSibling;
+            scrollEffect(prev);
+            currentcont.classList.remove("show");
+            prev.classList.add("show");
         }
-        if(item.deltaY < 0){
-            item.preventDefault();
-            if(currentcont){
-                scrollEffect(prev);
-                item.classList.remove("show");
-                prev.classList.add("show");
-            }
-        } else if(item.deltaY > 0){
-            item.preventDefault();
-            scrollEffect(next);
-            item.classList.remove("show");
-            next.classList.add("show");
-        }
-    });
-    console.log(currentcont);
+    } else if(e.deltaY > 0){
+        e.preventDefault();
+        scrollEffect(next);
+        currentcont.classList.remove("show");
+        next.classList.add("show");
+    }
+
+
 }
 document.body.addEventListener('wheel', scrolling);
